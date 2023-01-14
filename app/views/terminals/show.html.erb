@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @terminal.name %>
+</p>
+
+<p>
+  <strong>Num:</strong>
+  <%= @terminal.num %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @terminal.os %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @terminal.remark %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @terminal.place_id %>
+</p>
+
+<%= link_to 'Edit', edit_terminal_path(@terminal) %> |
+<%= link_to 'Back', terminals_path %>
