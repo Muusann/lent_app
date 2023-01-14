@@ -1,9 +1,13 @@
 header {
   height: 90px;
   margin-top: 0px;
-  background-color: rgb(191, 204, 202);
 }
+
+.title {
+  border-bottom: 5px solid rgb(99, 155, 224);
+}
+
 .title a {
   text-decoration: none;
-  color: rgba(27, 105, 214, 0.754);
+  color: rgba(0, 4, 8, 0.754);
 }
