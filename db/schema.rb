@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_14_071013) do
+ActiveRecord::Schema.define(version: 2023_01_14_073036) do
 
   create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2023_01_14_071013) do
 
   create_table "terminals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "places_id"
-    t.bigint "terminals_id"
     t.string "name"
     t.integer "num"
     t.string "os"
@@ -39,7 +38,6 @@ ActiveRecord::Schema.define(version: 2023_01_14_071013) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["places_id"], name: "index_terminals_on_places_id"
-    t.index ["terminals_id"], name: "index_terminals_on_terminals_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -53,5 +51,4 @@ ActiveRecord::Schema.define(version: 2023_01_14_071013) do
   add_foreign_key "rent_infos", "terminals"
   add_foreign_key "rent_infos", "users"
   add_foreign_key "terminals", "places", column: "places_id"
-  add_foreign_key "terminals", "terminals", column: "terminals_id"
 end
