@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Places</h1>
+<h1>貸し出し状況</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>支社・会場名</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,15 +13,10 @@
   <tbody>
     <% @places.each do |place| %>
       <tr>
-        <td><%= place.name %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to place.name, place %></td>
+        <td><%= link_to '編集', edit_place_path(place) %></td>
+        <td><%= link_to '削除', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Place', new_place_path %>
