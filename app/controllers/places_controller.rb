@@ -68,3 +68,7 @@ class PlacesController < ApplicationController
       params.require(:place).permit(:name)
     end
 end
+
+def rent_info
+  @rent_info = RentInfo.new
+end
